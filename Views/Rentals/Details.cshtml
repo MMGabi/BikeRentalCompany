@@ -1,0 +1,50 @@
+﻿@model BikeRentalCompany0.Models.Rental
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+<h1>Szczegóły</h1>
+
+<div>
+    <h4>Wynajem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataOd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataOd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IloscDni)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IloscDni)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdKlienta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdKlienta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdRoweru)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdRoweru)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPracownika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPracownika)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdWynajmu">Edytuj</a> |
+    <a asp-action="Index">Powrót do listy</a>
+</div>
+</div>

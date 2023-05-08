@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-home">
+    
+        <div class="home-img">
+            <img src="img/bike.jpg" width="100%" height="100%" />
+        </div>
+        <div class="home-text">
+            <p>Wypożyczalnia rowerów</p>
+        </div>
+        
+            <div class="first">
+                <div class="first-img">
+                    <img src="img/img2.jpg" />
+                </div>
+                <div class="first-text">
+                    <h2>Wypożyczalnia rowerów</h2>
+                    <p id="id1">
+                        Nasza strona pozwala na edycję tabel:
+                        <br />
+                       
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Bikes" asp-action="Index">Rowery</a>
+                  
+                        
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clients" asp-action="Index">Klienci</a>
+                      
+                      
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Workers" asp-action="Index">Pracownicy</a>
+             
+                       
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rentals" asp-action="Index">Wynajmy   </a>
+
+                        
+                    </p>
+                    <p>
+                        Na stronie internetowej możemy dodać nowy rower podając nazwę roweru oraz rozmiar koła. Dane te są wymagane. Klienta tworzymy podając Imię,Nazwisko, Numer telefonu i e-mail, z czego tylko e-mail jest opcjonalny. Aby dodać pracownika musimy podać jego imię, nazwisko i numer telefonu. Każdy z tych obiektów ma unikalny identyfikator Id, odpowiednio IdRoweru, IdKlienta, IdPracownika. Storzyliśmy również tabele Wynajmy, która pozwala na zaplanowanie wynajmu roweru. Aby to zrobić podajemy termin planowanego wynajęcia, ilość dni, oraz IdRoweru,IdPracownika i IdKlienta. Tylko podanie prawdziwych, istniejących danych pozwala nam na dodanie wynajmu. 
+                    </p>
+                </div>
+                <div id="empty"></div>
+            </div>
+        <hr class="second-hr">
+            <div class="second">
+                <div class="second-text">
+                    <h2>Budowa Bazy danych</h2>
+                  <p>Nasza baza danych została stworzona w oparciu o podejście CodeFirst. Oznacza to, że baza została sama stworzona po tym jak zadeklarowaliśmy odpowiednie klasy (Bike.cs, Client.cs, Rental.cs, Worker.cs). Następnie utowrzyliśmy również odpowiedniego connectionstring'a oraz wywołując builder.services utworzyliśmy bazę danych o nazwie BikeRental. Połączenia zachodzące między tabelami przedstawia diagram. Do dodawania migracji używaliśmy komendy w konsoli menadźera pakietów ,,add-migration Add...ToDatabase", do aktualizacji bazy danych używaliśmy komendy ,,update-database" "'</p>
+                </div>
+                <div class="second-img">
+                    <img src="img/img1.png" />
+                </div>
+
+                <div id="empty"></div>
+            </div>
+            
+            <hr class="third-hr">
+            <div class="first">
+                <div class="first-img">
+                    <img src="img/img3.png" />
+                </div>
+                <div class="first-text">
+                    <h2>Środowisko</h2>
+                   <p>Strona powstała w ASP.Net Core 6.0 MVC. Użyte pakiety Nu-Get zostały przedstawione na zdjęciu. </p>
+                </div>
+                <div id="empty"></div>
+            </div>
+            <hr class="third-hr">
+            <div class="third">
+                <h2>Podział ról</h2>
+                <p>
+                    Karina Krotkiewicz- Przygotowanie diagramu bazy danych, testowanie działania aplikacji, utworzenie kontrolera wraz z odpowiednimi widokami dla klasy Workers i Bikes.
+                </p>
+                <p>
+                   Karolina Gajewska-Przygotowanie dokumentacji, dobór grafiki dla strony, utworzenie kontrolera wraz z odpowiednimi widokami dla klasy Clients. Wybranie i dodanie Bootsrapa.
+            
+                </p>
+                <p>
+                    Gabriela Maślanka- Przygotowaine odpowiednich klas, utworzenie bazy danych, utworzenie kontrolera Rentals, utworzenie strony startowej, użycie BootstrapIcons,utworzenie ToastrAlerts, przygotowanie odpowiednich treści.
+                </p></div>
+            <hr class="fourth-hr">
+            <div class="fourth">
+                <h2>Dokumentacja</h2>
+                <p> 
+                    Celem projektu było utworzenie strony pozwalającej na zaplanowywanie wynajmu rowerów dla wypożyczalni rowerów. 
+                    <br />
+                    Opis Kontrolerów:
+                    <br /> 
+                    W naszym projekcie zostały utworzone cztery kontrolery: BikesController,ClientsController,RentalsController, WorkersController.
+                    W każdym kontrolerze zostały zaimplementowane metody Index, metody get: Detais,Create,Edit, Delate oraz metody Post: Create,Edit,DelateConfirmed. Metody te stanowią pełną obsługę CRUD. 
+                    <br/> 
+                    Opis Modeli:
+                    <br/> 
+                    Zaimplementowane modele to Bike.cs, Client.cs,Rental.cs i Worker.cs. Każdy z modeli posiada klucz główny  w postaci: Id[nazwaKlasy]. Klasy są połączone Bike, Client i Worker relacją jeden-do-wielu z klasą Rentals. 
+                    IdRoweru, IdKlienta i IdPracownika są w klasie Rental.cs kluczami obcymi o czym świadczy również zapis:[ForeignKey("...")]. Niektóre z danych zostały z góry określone w pewnych przedziałach dzięki zapisie typu: 
+                    [Range(1, 100, ErrorMessage = "Rozmiar koła w przedziale 1-100!")], który z góry określa że dana wartość (w tym przypadku rozmiar koła) może być tylko w przedziale od 1 do 100, przy podaniu błędnej informacji pod miejscem do wpisywania danych pojawia się ErrorMessage 
+                    o treści:Rozmiar koła w przedziale 1-100.
+                    <br/>
+                    Opis Widoków
+                    <br/>
+                    Dla wszystkich metod Create, Details, Delate i Edit zostały utworzone odrębne widoku prezentujące wymagane dane. W Widokach Index modeli Bike,Client,Rental i Worker zostaje wyświetlona lista odpowiednich danych.
+                    W widoku Index kontrolera Home zostaje wyświetlona strona startowa wraz z odnośnikami do każdej z zakładek. Po poprawnym dodaniu danych do któregokolwiek modelu danych w prawym górnym rogu wyświetla się informacja, że operacja przebiegła pomyślnie.
+                </p>
+            </div>
+            <hr class="fourth-hr">
+            <div class="fourth">
+                <h2>Instrukcja obsługi strony</h2>
+                <p> 
+                    Aby wejść na stronę główną należy kliknąć w napis ,,Wypożyczalnia Rowerów" lub ,,Strona główna". Aby przenieść się do interesującej nas podstrony należy znaleźć jej nazwę na górnym pasku nawigacyjnym i kliknąć w niego. Korzystająć ze strony Rowery widzimy listę dostępnych rowerów, które można edytować, zobaczyć szczegóły lub usunąć. Aby dodać nowy rower należy kliknąć w ikonę plusika z napisem dodaj nowy rower. Po wpisaniiu danych i zatwierdzeniu przyciskiem Create zostaniemy przekierowani do listy rowerów, a w prawym górnym rogu pokaże się napis "operacja zakończona pomyślnie.Tak samo postępujemy z listą Pracownicy i Klienci. Aby dodać nowy wynajem musimy mieć stworzonych odpowiednich pracowników, klientów i rowery." 
+                </p>
+            </div>
+            
+    </div>
+    <footer>
+
+        <div class="footer-text-2">
+            <p>&copy;Bike Rental Company</p>
+            
+        </div>
+    </footer>
+    
+        
+    
+  

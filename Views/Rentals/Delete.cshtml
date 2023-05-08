@@ -1,0 +1,57 @@
+﻿@model BikeRentalCompany0.Models.Rental
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+
+<h1>Usuń</h1>
+
+<h3>Jesteś pewien?</h3>
+<div>
+    <h4>Wynajem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataOd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataOd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IloscDni)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IloscDni)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdKlienta)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdKlienta)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdRoweru)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdRoweru)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdPracownika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdPracownika)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdWynajmu" />
+        <input type="submit" value="Delete" class="btn btn-danger" style="width:150px" /> 
+       <div>
+    <a asp-action="Index" class="btn btn-secondary" style="width:150px">Powróć do listy</a>
+</div>
+
+    </form>
+</div>
+</div>

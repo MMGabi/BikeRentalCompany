@@ -1,0 +1,44 @@
+﻿@model BikeRentalCompany0.Models.Worker
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+<h1>Usuń</h1>
+
+<h3>Jesteś pewien?</h3>
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Imie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Imie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nazwisko)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nazwisko)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NrTelefonu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NrTelefonu)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdPracownika" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+       <div>
+    <a asp-action="Index" class="btn btn-secondary" style="width:150px">Powróć do listy</a>
+</div>
+
+    </form>
+</div>
+</div>

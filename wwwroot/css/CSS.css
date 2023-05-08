@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0 important;
+    padding: 0 important;
+}
+
+p {
+    margin: 0;
+}
+
+.container-home {
+    width: 100%;
+}
+
+.home-text p {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 68px;
+    margin-top: -35%;
+    margin-bottom: 80vh;
+    width: 100%;
+    color: #02213B;
+    text-shadow: 0 4px white;
+}
+#id1{
+    padding-bottom:0;
+}
+
+.first {
+    width: 100%;
+    height: 60vh;
+    backgroung-color: #FAFAFA;
+}
+
+.first-img {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.first-img img {
+        width: 100%;
+        height: 100%;
+        padding: 10vh 5vw 5vh 5vw;
+        transition: 1.5s;
+}
+
+.first-img img:hover {
+    width: 105%;
+    height: 105%;
+    transition: 1.5s;
+    padding: 8vh 5vw 5vh 3vw;
+}
+
+.first-text {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+    .first-text h2 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        padding: 1.5vh;
+    }
+
+    .first-text p {
+        padding: 3vh 10vw 10vh 10vw;
+    }
+
+
+#empty {
+    clear: both;
+}
+.second-hr {
+    margin-top: 30vh;
+    margin-bottom: 10vh;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.second {
+    width: 100%;
+    height: 60vh;
+    margin-top: 20vh;
+}
+
+.second-text {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+    .second-text h2 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        padding: 1.5vh;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .second-text p {
+        padding: 0vh 10vw 10vh 10vw;
+    }
+
+.second-img {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+    .second-img img {
+        width: 90%;
+        height: 90%;
+        padding: 5vh 5vw 5vh 1vw;
+        transition: 1.5s;
+    }
+.second-img img:hover {
+    width: 95%;
+    height: 95%;
+    transition: 1.5s;
+    padding: 2vh 2vw 2vh 0;
+}
+.third {
+    backgroung-color: #00ff21;
+}
+
+.third-hr {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.third h2 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    padding: 1.5vh;
+}
+
+.third p {
+    padding: 5vh 12vw 5vh 12vw;
+    font-size: 16px;
+}
+
+.fourth-hr {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.fourth h2 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    padding: 1.5vh;
+}
+
+.fourth p {
+    padding: 5vh 12vw 5vh 12vw;
+    font-size: 16px;
+}
+
+footer {
+
+    width: 80%;
+    height: 10vh;
+    border-top: 1px solid;
+    margin-left: 10%;
+}
+
+
+
+.footer-text-2 {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-top: 3vh;
+    padding-left: 5vw;
+}

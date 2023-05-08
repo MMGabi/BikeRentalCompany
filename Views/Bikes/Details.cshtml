@@ -1,0 +1,32 @@
+﻿@model BikeRentalCompany0.Models.Bike
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="container">
+<h1>Szczegóły</h1>
+
+<div>
+    <h4>Rower</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NazwaRoweru)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NazwaRoweru)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.RozmiarKola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RozmiarKola)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.IdRoweru" >Edytuj</a> |
+      <a asp-action="Index">Wróć do listy</a>
+    
+</div>
+</div>
